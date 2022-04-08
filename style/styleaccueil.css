@@ -1,0 +1,261 @@
+* {
+  box-sizing: border-box;
+}
+.nav {
+  height: 50px;
+  width: 100%;
+  background-color: rgb(54, 54, 54);
+  position: relative;
+}
+
+.nav > .nav-header {
+  display: flex;
+  float: left;
+  
+}
+
+.nav > .nav-header > .logo{
+    
+    text-align: left;
+}
+.nav > .nav-header > .titre{
+  color:red;
+  text-align: right;
+  font-size: 18px;
+  padding: 0px 0px 0px 0px;
+  
+}
+
+
+
+.nav > .nav-btn {
+  display: none;
+}
+
+.nav > .nav-links {
+  display: inline;
+  float: right;
+  font-size: 18px;
+}
+
+.nav > .nav-links > a {
+  display: inline-block;
+  padding: 13px 10px 13px 10px;
+  text-decoration: none;
+  color: white;
+}
+
+.nav > .nav-links > .active {
+  color:red;
+}
+
+.nav > .nav-links > a:hover {
+  color: red;
+  
+}
+
+.nav > #nav-check {
+  display: none;
+}
+
+
+
+ body {color:white;background-color: black;font-family: 'spinnaker';}
+ h3{text-decoration: underline yellow;
+  display: flex;
+  justify-content:center;
+  align-items: center;
+}  
+
+  
+  
+ 
+
+
+
+
+ .c2{
+   display: flex;
+    justify-content:center;
+    align-items: center;
+
+ }
+
+ 
+ @media all and (min-width:750px){
+  h1{
+      display: flex;
+      justify-content:center;
+      align-items: center;  
+  }
+
+  h2{
+    color:orange;
+    display: flex;
+    justify-content:center;
+    align-items: center;  
+}
+
+  .c3 {
+    display: flex;
+      justify-content:center;
+      align-items: center;
+  }
+  h3{
+    font-size: 40px;
+  }
+
+  .num13{
+    font-size: 100px;
+    text-align: left;
+    padding-right: 20px;
+    color: red;
+    font-style: bold;
+  }
+
+  .text13{
+    text-align: right;
+    padding-left: 20px;
+    font-size: 18px;
+    
+  }
+  .para13{
+    display: flex;
+      justify-content:center;
+      align-items: center; 
+      
+  }
+
+  .num2{
+    font-size: 100px;
+    text-align: right;
+    padding-left: 20px;
+    color: red;
+    font-style: bold;
+  }
+
+  .text2{
+    text-align: left;
+    padding-right: 20px;
+    font-size: 18px;
+    
+  }
+  .para2{
+    display: flex;
+      justify-content:center;
+      align-items: center; 
+      
+  }
+  
+
+ }
+
+ @media all and (max-width:750px){
+  .nav > .nav-btn {
+    display: inline-block;
+    position: absolute;
+    right: 0px;
+    top: 0px;
+  }
+  .nav > .nav-btn > label {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    padding: 13px;
+  }
+  .nav > .nav-btn > label:hover,.nav  #nav-check:checked ~ .nav-btn > label {
+    background-color: rgba(0, 0, 0, 0.3);
+  }
+  .nav > .nav-btn > label > span {
+    display: block;
+    width: 25px;
+    height: 10px;
+    border-top: 2px solid #eee;
+  }
+  .nav > .nav-links {
+    position: absolute;
+    display: block;
+    width: 100%;
+    background-color: #333;
+    height: 0px;
+    transition: all 0.3s ease-in;
+    overflow-y: hidden;
+    top: 50px;
+    left: 0px;
+  }
+  .nav > .nav-links > a {
+    display: block;
+    width: 100%;
+  }
+  .nav > #nav-check:not(:checked) ~ .nav-links {
+    height: 0px;
+  }
+  .nav > #nav-check:checked ~ .nav-links {
+    height: calc(100vh - 50px);
+    overflow-y: auto;
+  }
+  h1{
+      display: flex;
+      justify-content:center;
+      align-items: center; 
+  }
+
+  h2{
+    color:orange;
+    display: flex;
+    justify-content:center;
+    align-items: center; 
+     
+}
+.c3 img{
+  width: 350px;
+  display: flex;
+    justify-content:center;
+    align-items: center;
+}
+h3{
+  font-size: 30px;
+}
+.num2{
+  font-size: 60px;
+  color: red;
+    font-style: bold;
+}
+.num13{
+  font-size: 60px;
+  color: red;
+    font-style: bold;
+    
+}
+.text13{
+  text-align: right;
+}
+.para2{
+  display: flex;
+    justify-content:center;
+    align-items: center; 
+    
+}
+.para13{
+  display: flex;
+    justify-content:center;
+    align-items: center; 
+    
+}
+
+  
+
+ 
+
+}
+
+
+  
+  
+
+
+
+ 
+
+ 
+

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>contact </title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+          <link href="style/stylecontact.css" rel="stylesheet">
+    </head>
+
+    <body>
+        <header>
+            <div class="nav">
+            <input type="checkbox" id="nav-check">
+            
+            <div class="nav-header">
+                <div class="logo">
+                    <img src="pics/01/lg.png" width="50px" height="50px">
+                </div>
+                <div class="titre">
+                    <p >GenesisApp</p> 
+                </div>
+                
+            </div>
+                  
+            
+            <div class="nav-btn">
+              <label for="nav-check">
+                <span></span>
+                <span></span>
+                <span></span>
+              </label>
+            </div>
+            
+            <div class="nav-links">
+                 
+                
+                <a  href="accueil.html">Acceuil</a>
+                <a class="ancre" href="accueil.html">A propos</a>
+                <a href="fonction.html">Fonctionnement</a>
+                
+                <a href="parter.html">Devenir Partenaire</a>
+                <a class="active" href="contact.html">Contact</a>
+            </div>
+        </div>
+        </header>
+        <h1 class="h1">Contact</h1>
+            <p class="p1">En cas de problème ou d'intérrogation concernant notre service.</br>
+        
+                    Contactez-nous par email ou par l'intermédiaire de notre formulaire de contact !</p>
+        
+        
+                <div class="container">
+                    
+                <form onsubmit="sendEmail(); reset();">
+                    
+                    <label for="Nom"> Votre nom :</label>
+                  <input type="text" id="namebusinee"  required>
+                  
+                  <label for="Nom">Votre numero de telephone :</label>  
+                  <input type="text" id="number"  required>  
+                  
+                  <label for="Nom">Votre adresse email :</label>
+                  <input type="text" id="email"  required>
+
+                  <label for="sujet">Quel est le sujet de votre message ?</label>
+                  <select name="sujet" id="sujet" required>
+                  <option value="" disabled selected hidden>Choisissez le sujet de votre message</option>
+                  <option value="probleme-compte">Problème avec mon compte</option>
+                  <option value="question-produit">Question à propos du fonctionnement de l'application</option>
+                  <option value="Signalement">Je souhaite signaler un utilisateur ou un commerçant</option>
+                  <option value="autre">Autre...</option>
+                  </select>  
+                    <textarea id="message"  rows="5" ></textarea>
+                    <button type="submit">Envoyez</button>
+                </form>
+
+
+
+        </div>
+       <script src="https://smtpjs.com/v3/smtp.js"></script>
+       <script>
+           function sendEmail(){
+            Email.send({
+                Host : "smtp.gmail.com",
+                Username : "saturne18@gmail.com",
+                Password : "Jaimecata1",
+                To : 'david.tencer@esme.fr',
+                From : document.getElementById("email").value,
+                Subject : "This is the subject",
+                Body : "Name :" + document.getElementById("name").value
+                +"<br> Email :" + document.getElementById("email").value
+                +"<br> phone :" + document.getElementById("phone").value
+                +"<br> Message : " + document.getElementById("message").value
+            }).then(
+             message => alert("message succefully")
+                );
+
+
+           }
+           
+           
+       </script>
+             
+              
+           
+
+
+        
+
+
+
+
+
+
+
+
+
+    </body>
+
+
+</html>

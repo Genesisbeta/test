@@ -1,0 +1,213 @@
+* {
+  box-sizing: border-box;
+}
+
+.nav {
+  height: 50px;
+  width: 100%;
+  background-color: rgb(54, 54, 54);
+  position: relative;
+}
+
+.nav > .nav-header {
+  display: flex;
+  float: left;
+  
+}
+
+.nav > .nav-header > .logo{
+    
+    text-align: left;
+}
+.nav > .nav-header > .titre{
+  color:red;
+  text-align: right;
+  font-size: 18px;
+  padding: 0px 0px 0px 0px;
+  
+}
+
+
+
+.nav > .nav-btn {
+  display: none;
+}
+
+.nav > .nav-links {
+  display: inline;
+  float: right;
+  font-size: 18px;
+}
+
+.nav > .nav-links > a {
+  display: inline-block;
+  padding: 13px 10px 13px 10px;
+  text-decoration: none;
+  color: white;
+}
+
+.nav > .nav-links > .active {
+  color:red;
+}
+
+.nav > .nav-links > a:hover {
+  color: red;
+  
+}
+
+.nav > #nav-check {
+  display: none;
+}
+
+
+  body{
+    background: black;
+    color: white;
+    font-family: 'spinnaker';
+    
+  
+
+  }
+
+  .container{
+    min-width: 250px;
+    max-width: 500px;
+    
+    font-size: 20px;
+    display: inline;
+    
+    
+  }
+
+ 
+.h1{
+  color: red;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.p1{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+  form{
+  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    
+    width: 100%;
+    
+    
+    
+  }
+
+
+
+
+    form select{
+      
+      border-radius: 8px;
+      width: 90%;
+      max-width: 380px;
+      padding: 10px;
+      background: red;
+      border: transparent;
+      font-style: bold;
+
+    }
+    form label{
+      margin-top: 3px;
+    }
+
+    form textarea{
+      width: 90%;
+      max-width: 380px;
+      margin-top: 5px;
+      border-radius: 8px;
+      
+      background:red;
+      border: transparent;
+      padding: 10px;
+    }
+
+    form input{
+      border-radius: 8px;
+      width: 90%;
+      max-width: 380px;
+      padding: 10px;
+      
+      background:red;
+      border: transparent;
+     
+    }
+  form button{
+    
+    
+    width: 95%;
+    max-width: 380px;
+    padding: auto;
+    border-radius: 8px;
+    margin-top: 40px;
+    padding: 10px;
+    
+    background: red;
+    color: black;
+    border: transparent;
+    
+
+  }
+
+  @media all and (max-width:750px){
+    .nav > .nav-btn {
+      display: inline-block;
+      position: absolute;
+      right: 0px;
+      top: 0px;
+    }
+    .nav > .nav-btn > label {
+      display: inline-block;
+      width: 50px;
+      height: 50px;
+      padding: 13px;
+    }
+    .nav > .nav-btn > label:hover,.nav  #nav-check:checked ~ .nav-btn > label {
+      background-color: rgba(0, 0, 0, 0.3);
+    }
+    .nav > .nav-btn > label > span {
+      display: block;
+      width: 25px;
+      height: 10px;
+      border-top: 2px solid #eee;
+    }
+    .nav > .nav-links {
+      position: absolute;
+      display: block;
+      width: 100%;
+      background-color: #333;
+      height: 0px;
+      transition: all 0.3s ease-in;
+      overflow-y: hidden;
+      top: 50px;
+      left: 0px;
+    }
+    .nav > .nav-links > a {
+      display: block;
+      width: 100%;
+    }
+    .nav > #nav-check:not(:checked) ~ .nav-links {
+      height: 0px;
+    }
+    .nav > #nav-check:checked ~ .nav-links {
+      height: calc(100vh - 50px);
+      overflow-y: auto;
+    }
+  }
+
+
+
